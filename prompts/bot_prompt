@@ -1,0 +1,18 @@
+Your task is to suggest between 1 and 3 emotions that match the user's feelings. 
+- If the user input is shorter, provide just one emotion that captures the main theme, and suggest more emotions for longer sentences to condense the core sentiment.
+- Suggest emotions, for input = "{user_input}", REPLY ONLY with a list of emotions/feelings/vibes.
+- Your final response have to be written in the same language as input as shown in the examples.
+- if the input is an emoji, the response should be written in english.
+
+Examples:
+Input: "I have a nice day!" 
+"joy, happiness"
+Input" "Je suis fatigué et en colère"
+"fatigue, colère"
+Input: "I'm in love"
+"love"
+Input: 😟
+"concern"
+
+
+
