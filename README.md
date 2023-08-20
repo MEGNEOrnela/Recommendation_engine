@@ -9,26 +9,35 @@ The input text can be in either English or French.
 
 The following points outline the steps used to achieve the task:
 **Lyric data scraping**: apply web scraping techniques (beautiful soup) to extract lyrical content from songs ( African songs [1](https://afrikalyrics.com/top-lyrics), [2](https://afrikalyrics.com/language/French)).
-**Large Language Model (LLM)**: use LLM with the Langchain library, to generate summarized representations of the lyrics and get a list of emotion for each lyric.
+**Large Language Model (LLM)**: use LLM with the Langchain library, to generate summarized representations of the lyrics and get a list of emotions for each lyric.
 **Data Storage**: use the ActiveLoop Deep Lake vector store to store all the emotions, metadata, and embeddings.
 **User Input analysis**: the user input is sent to an LLM to get the emotion that matches his feeling.
 **Music Recommendation**: in cases where the user seeks song recommendations,  a cosine similarity search is performed between the encoded user emotions and those stored in the database. The top 2 songs with the highest similarity scores corresponding to the user's emotion are selected as recommendations.
-**Motivational Message**: for a user interested in motivational messages or advice, his associated emotions pass through an LLM which  provides an advice or motivated message depending on the emotion.
+**Motivational Message**: for a user interested in motivational messages or advice, his associated emotions pass through an LLM which  provides advice or a motivated message depending on the emotion.
 
 
 ## Setup
+
 1. Clone the repo 
 2. create an activate virtual environment
 ```bash
+python3 -m venv venv
+source venv/bin/activate
    ```
 3. Install the requirements
 ```bash
+python3 -m pip install --upgrade pip
+pip3 install -r requirements.txt
    ```
 4. Setup the .env file by adding
   ```bash
+OPENAI_API_KEY=<OPENAI_API_KEY>
+ACTIVELOOP_TOKEN=<ACTIVELOOP_TOKEN>
    ```
 5. Test the app
-
+```bash
+streamlit run app.py
+```
 
 ## Note 
-In this work, a database containing only 28 lyrics song was used. Consequently, 
+In this work, a database containing only 28 lyrics songs was used. Consequently, the LLM's ability is limited to recommend adequate songs for certain emotions.
