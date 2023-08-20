@@ -1,5 +1,4 @@
 
-https://github.com/MEGNEOrnela/Recommendation_engine/assets/82549028/ebadedf1-7066-448e-9d86-8f981243c4e0
 # Welcome to MeloMood 💿🎵💬
 
 This work was inspired and built upon the great work made [here](https://github.com/FrancescoSaverioZuppichini/FairytaleDJ/tree/main).
