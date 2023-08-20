@@ -9,8 +9,8 @@ The input text can be in either English or French.
 
 The following points outline the steps used to achieve the task:
 - **Lyric data scraping**: apply web scraping techniques (beautiful soup) to extract lyrical content from songs ( African songs [1](https://afrikalyrics.com/top-lyrics), [2](https://afrikalyrics.com/language/French)).
-- **Large Language Model (LLM)**: use LLM with the Langchain library, to generate summarized representations of the lyrics and get a list of emotions for each lyric.
-- **Data Storage**: use the ActiveLoop Deep Lake vector store to store all the emotions, metadata, and embeddings.
+- **Large Language Model (LLM)**: use LLM with the [Langchain library](https://python.langchain.com/docs/get_started/introduction.html), to generate summarized representations of the lyrics and get a list of emotions for each lyric.
+- **Data Storage**: use the ActiveLoop [Deep Lake](https://www.deeplake.ai/) vector store to store all the emotions, metadata, and embeddings.
 - **User Input analysis**: the user input is sent to an LLM to get the emotion that matches his feeling.
 - **Music Recommendation**: in cases where the user seeks song recommendations,  a cosine similarity search is performed between the encoded user emotions and those stored in the -database. The top 2 songs with the highest similarity scores corresponding to the user's emotion are selected as recommendations.
 - **Motivational Message**: for a user interested in motivational messages or advice, his associated emotions pass through an LLM which  provides advice or a motivated message depending on the emotion.
